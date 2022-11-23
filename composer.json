@@ -1,7 +1,7 @@
 {
   "name": "university-of-copenhagen/ku-latest-pageupdate",
   "type": "typo3-cms-extension",
-  "description": "ku_latest_pageupdate.",
+  "description": "When a content element is added or edited, the latest modified date is added for its corresponding page.",
   "license": "GPL-2.0-or-later",
   "require": {
     "typo3/cms-backend": "^10.4.19 || ^11.5.0",
