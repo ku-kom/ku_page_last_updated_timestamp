@@ -14,15 +14,16 @@ class LatestPageUpdates
          * @param string $id
          * @param array $fieldArray
          * @param \TYPO3\CMS\Core\DataHandling\DataHandler $dataHandler
-         * @throws \Bolius\BoliusSetup\Exception\FileStorageException
          */
     public function processDatamap_afterDatabaseOperations($status, $table, $id, $fieldArray, $dataHandler)
     {
-        if (!($table === 'tt_content' || $table === 'pages')) return;
+        if (!($table === 'tt_content' || $table === 'pages')) {
+            return;
+        }
 
-		if ($table === 'pages' && MathUtility::canBeInterpretedAsInteger($id) === false) {
-			$id = $dataHandler->substNEWwithIDs[$id];
-		}
+        if ($table === 'pages' && MathUtility::canBeInterpretedAsInteger($id) === false) {
+            $id = $dataHandler->substNEWwithIDs[$id];
+        }
 
         if ($table === 'tt_content') {
             $id = $dataHandler->recordInfo('tt_content', $id, 'pid')['pid'];
