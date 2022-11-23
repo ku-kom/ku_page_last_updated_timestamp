@@ -1,0 +1,28 @@
+{
+  "name": "university-of-copenhagen/ku-latest-pageupdate",
+  "type": "typo3-cms-extension",
+  "description": "ku_latest_pageupdate.",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "typo3/cms-backend": "^10.4.19 || ^11.5.0",
+    "typo3/cms-core": "^10.4.19 || ^11.5.0",
+    "typo3/cms-dashboard": "^10.4.19 || ^11.5.0",
+    "typo3/cms-fluid": "^10.4.19 || ^11.5.0"
+  },
+  "authors": [
+    {
+      "name": "",
+      "email": ""
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "UniversityOfCopenhagen\\LatestPageUpdates\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "ku_latest_pageupdate"
+    }
+  }
+}
